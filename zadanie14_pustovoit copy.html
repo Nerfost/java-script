@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 14 - Pustovoit</title>
+</head>
+<body>
+     <textarea cols="90" rows="24"> 
+    <script>
+
+        var m_pus = prompt("Podaj wartość m :", "4");
+        m_pus = parseInt(m_pus);
+
+
+        var m_plus2 = m_pus + 2; 
+        var iloczyn = m_pus * m_plus2; 
+
+
+        var a = m_plus2 + m_pus; 
+        var b = m_pus * m_plus2 / m_pus; 
+
+        var mian1 = m_plus2;  
+        var mian2 = iloczyn + m_pus; 
+        var mian3 = iloczyn * (m_pus / (m_plus2));
+
+        document.write("<p>1/" + m_pus + " = 1/" + mian1 + " + 1/" + mian2 + " + 1/" + mian3 + "</p>");
+    </script>
+    </textarea>
+</body>
+</html>
