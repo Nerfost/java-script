@@ -7,24 +7,17 @@
 <body>
      <textarea cols="90" rows="24"> 
     <script>
-
-        var m_pus = prompt("Podaj wartość m :", "4");
+        var m_pus = prompt("Podaj wartość m:", );
         m_pus = parseInt(m_pus);
 
 
-        var m_plus2 = m_pus + 2; 
-        var iloczyn = m_pus * m_plus2; 
+        var m1_pus = m_pus + 2;
+        var m2_pus = (m_pus + 1) * (m_pus + 2);
+        var m3_pus = m_pus * (m_pus + 1);
 
-
-        var a = m_plus2 + m_pus; 
-        var b = m_pus * m_plus2 / m_pus; 
-
-        var mian1 = m_plus2;  
-        var mian2 = iloczyn + m_pus; 
-        var mian3 = iloczyn * (m_pus / (m_plus2));
-
-        document.write("<p>1/" + m_pus + " = 1/" + mian1 + " + 1/" + mian2 + " + 1/" + mian3 + "</p>");
+        document.write("<p>1/" + m_pus + " = 1/" + m1_pus + " + 1/" + m2_pus + " + 1/" + m3_pus + "</p>");
     </script>
     </textarea>
 </body>
 </html>
+
