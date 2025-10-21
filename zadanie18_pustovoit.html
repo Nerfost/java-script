@@ -1,0 +1,31 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Pustovoit - Zadanie 18</title>
+</head>
+<body>
+<div style="color:navy; font-size:24px;">
+<script language="JavaScript">
+
+var a_pus = parseFloat(prompt("Podaj a=",""));
+var b_pus = parseFloat(prompt("Podaj b=",""));
+
+function suma_pus(a,b){ return a+b; }
+function odejmowanie_pus(a,b){ return a-b; }
+function mnozenie_pus(a,b){ return a*b; }
+function od_kwadratu_pus(a,b){
+    document.write(a+"^2="+(a*a)+"<br>");
+    document.write(b+"^2="+(b*b)+"<br>");
+}
+function reszta_z_dzielenia_a_przez_b_pus(a,b){ return a%b; }
+
+document.write("Suma="+suma_pus(a_pus,b_pus)+"<br>");
+document.write("Różnica="+odejmowanie_pus(a_pus,b_pus)+"<br>");
+document.write("Iloczyn="+mnozenie_pus(a_pus,b_pus)+"<br>");
+od_kwadratu_pus(a_pus,b_pus);
+document.write("Reszta z dzielenia="+reszta_z_dzielenia_a_przez_b_pus(a_pus,b_pus));
+
+</script>
+</div>
+</body>
+</html>

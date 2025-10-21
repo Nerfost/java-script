@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 20 - Pustovoit</title>
+</head>
+<body>
+<script type="text/javascript">
+function odleglosc_pus(x1, y1, x2, y2) {
+    return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+}
+function obliczDlBokow() {
+    var xa_pus = parseFloat(document.getElementById('xa').value);
+    var ya_pus = parseFloat(document.getElementById('ya').value);
+    var xb_pus = parseFloat(document.getElementById('xb').value);
+    var yb_pus = parseFloat(document.getElementById('yb').value);
+    var xc_pus = parseFloat(document.getElementById('xc').value);
+    var yc_pus = parseFloat(document.getElementById('yc').value);
+
+    var AB_pus = odleglosc_pus(xa_pus, ya_pus, xb_pus, yb_pus);
+    var BC_pus  = odleglosc_pus(xb_pus, yb_pus, xc_pus, yc_pus);
+    var AC_pus  = odleglosc_pus(xa_pus, ya_pus, xc_pus, yc_pus);
+
+    document.getElementById('wynik').innerHTML = 
+        "AB = " + AB_pus.toFixed(2) + " cm<br>" +
+        "BC = " + BC_pus.toFixed(2) + " cm<br>" +
+        "AC = " + AC_pus.toFixed(2) + " cm";
+}
+</script>
+
+<h1>Długości boków trójkąta</h1>
+X_A: <input type="text" id="xa" value="0"><br><br>
+Y_A: <input type="text" id="ya" value="0"><br><br>
+X_B: <input type="text" id="xb" value="0"><br><br>
+Y_B: <input type="text" id="yb" value="0"><br><br>
+X_C: <input type="text" id="xc" value="0"><br><br>
+Y_C: <input type="text" id="yc" value="0"><br><br>
+
+<input type="button" value="Oblicz długości boków" onclick="obliczDlBokow()"><br><br>
+
+<div id="wynik" style="color:blue; font-size:24px;"></div>
+</body>
+</html>
