@@ -1,0 +1,35 @@
+ <textarea cols="90" rows="24"> 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 23 - Pustovoit</title>
+</head>
+<body>
+<script type="text/javascript">
+function obliczDrabine_pustovoit() {
+    var D_pus = parseFloat(document.getElementById('D_pus').value);
+    var X_pus = parseFloat(document.getElementById('X_pus').value);
+    if (isNaN(D_pus) || isNaN(X_pus) || D_pus <= 0 || X_pus <= 0) {
+        alert("Błędne dane");
+        return;
+    }
+    var dlugosc_pus = Math.sqrt(D_pus*D_pus + X_pus*X_pus);
+    var katRad_pus = Math.atan(D_pus / X_pus);
+    var katStopnie_pus= katRad_pus * 180 / Math.PI;
+    document.getElementById('wynik').innerHTML =
+        "Długość drabiny = " + dlugosc_pus.toFixed(2) + " cm<br>" +
+        "Kąt nachylenia = " + katStopnie_pus.toFixed(2) + "°";
+}
+</script>
+
+<h1>Drabina</h1>
+Wysokość podparcia (D): <input type="text" id="D_pus" value="0"><br><br>
+Odległość od muru (X): <input type="text" id="X_pus" value="0"><br><br>
+
+<input type="button" value="Oblicz" onclick="obliczDrabine_pustovoit()"><br><br>
+
+<div id="wynik" style="color:purple; font-size:24px;"></div>
+</body>
+</html>
+ </textarea>

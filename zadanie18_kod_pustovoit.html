@@ -1,0 +1,33 @@
+ <textarea cols="90" rows="24"> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Pustovoit - Zadanie 18</title>
+</head>
+<body>
+<div style="color:navy; font-size:24px;">
+<script language="JavaScript">
+
+var a_pus = parseFloat(prompt("Podaj a=",""));
+var b_pus = parseFloat(prompt("Podaj b=",""));
+
+function suma_pus(a_pus,b_pus){ return a_pus+b_pus; }
+function odejmowanie_pus(a_pus,b_pus){ return a_pus-b_pus; }
+function mnozenie_pus(a_pus,b_pus){ return a_pus*b_pus; }
+function od_kwadratu_pus(a_pus,b_pus){
+    document.write(a_pus+"^2="+(a_pus*a_pus)+"<br>");
+    document.write(b_pus+"^2="+(b_pus*b_pus)+"<br>");
+}
+function reszta_z_dzielenia_a_przez_b_pus(a_pus,b_pus){ return a%b; }
+
+document.write("Suma="+suma_pus(a_pus,b_pus)+"<br>");
+document.write("Różnica="+odejmowanie_pus(a_pus,b_pus)+"<br>");
+document.write("Iloczyn="+mnozenie_pus(a_pus,b_pus)+"<br>");
+od_kwadratu_pus(a_pus,b_pus);
+document.write("Reszta z dzielenia="+reszta_z_dzielenia_a_przez_b_pus(a_pus,b_pus));
+
+</script>
+</div>
+</body>
+</html>
+ </textarea>

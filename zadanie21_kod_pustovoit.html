@@ -1,0 +1,41 @@
+ <textarea cols="90" rows="24"> 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 21 - Pustovoit</title>
+</head>
+<body>
+<script type="text/javascript">
+function poleWalca(r, h) {
+    return 2 * Math.PI * r * (r + h);
+}
+function objetoscWalca(r, h) {
+    return Math.PI * Math.pow(r, 2) * h;
+}
+function obliczWalec() {
+    var r = parseFloat(document.getElementById('r').value);
+    var h = parseFloat(document.getElementById('h').value);
+    if (isNaN(r) || isNaN(h) || r <= 0 || h <= 0) {
+        alert("Błędne dane");
+        return;
+    }
+    var p = poleWalca(r, h);
+    var v = objetoscWalca(r, h);
+    document.getElementById('wynik').innerHTML = 
+        "Pole powierzchni walca = " + p.toFixed(2) + " cm²<br>" +
+        "Objętość walca = " + v.toFixed(2) + " cm³";
+    alert("Pole powierzchni: " + p.toFixed(2) + " cm²\nObjętość: " + v.toFixed(2) + " cm³");
+}
+</script>
+
+<h1>Walec</h1>
+Promień (r): <input type="text" id="r" value="0"><br><br>
+Wysokość (h): <input type="text" id="h" value="0"><br><br>
+
+<input type="button" value="Oblicz" onclick="obliczWalec()"><br><br>
+
+<div id="wynik" style="color:green; font-size:24px;"></div>
+</body>
+</html>
+ </textarea>

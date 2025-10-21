@@ -1,0 +1,33 @@
+ <textarea cols="90" rows="24"> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Zadanie 24 - Pustovoit</title>
+</head>
+<body>
+<div style="background-color:gray; color:blue; font-size:22px; width:360px; padding:10px;">
+<script language="JavaScript">
+
+var x1_pus = parseFloat(prompt("Podaj x1 (w stopniach)=",""));
+var x2_pus = parseFloat(prompt("Podaj x2=",""));
+
+
+
+var x1_rad_pus = (x1_pus * Math.PI) / 180;
+
+
+var y1_pus = 3 * Math.pow( x1_pus, 8 / (8 + 2));
+var y2_pus = 2 * Math.cos(x1_rad_pus) + 3 * Math.sin(x1_rad_pus);
+var y3_pus = Math.cbrt(Math.pow(x1_pus, 5) + 2 * Math.pow(x2_pus, 4) * Math.abs(x1_pus - x2_pus));
+
+document.write("x1 = " + x1_pus + "&nbsp;&nbsp;&nbsp;&nbsp;x2 = " + x2_pus + "<br>");
+document.write("x1 = " + x1_pus + "&nbsp;&nbsp;&nbsp;&nbsp;x1 = " + x1_rad_pus.toFixed(2) + "<br>");
+document.write("y1 = " + y1_pus.toFixed(2) + "<br>");
+document.write("y2 = " + y2_pus.toFixed(2) + "<br>");
+document.write("y3 = " + y3_pus.toFixed(2));
+
+</script>
+</div>
+</body>
+</html>
+ </textarea>
