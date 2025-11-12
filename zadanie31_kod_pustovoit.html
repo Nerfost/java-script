@@ -1,0 +1,43 @@
+<html>
+<head>
+    <title>Zadanie 31 - Pustovoit</title>
+<script type="text/javascript">
+
+var komputer = {
+    marka: 'Dell',
+    model: 'XPS 13',
+    karta_graficzna: 'NVIDIA GeForce RTX 3050',
+    ram: '16GB',
+    pokaz: function() {
+        document.write('Obiekt: Komputer<br>');
+        document.write('Pola:<br>');
+        document.write('marka: ' + this.marka + '<br>');
+        document.write('model: ' + this.model + '<br>');
+        document.write('karta_graficzna: ' + this.karta_graficzna + '<br>');
+        document.write('ram: ' + this.ram + '<br>');
+        document.write('Metody:<br>');
+        document.write('pokaz, komputer_wyswietl_pustovoit<br>');
+    }
+};
+
+komputer.pokaz();
+komputer.system_operacyjny = "Windows 11";
+komputer.komputer_wyswietl_pustovoit = function() {
+    alert("System operacyjny: " + this.system_operacyjny);
+};
+
+komputer.komputer_wyswietl_pustovoit();
+
+</script>
+</head>
+<body>
+<br>
+Programowanie obiektowe.<br>
+Obiekt: komputer<br>
+Pola: marka, model, karta_graficzna, ram<br>
+Nowe pole: system_operacyjny<br>
+Metody:
+pokaz <br>
+Nowa metoda: komputer_wyswietl_pustovoit
+</body>
+</html>
