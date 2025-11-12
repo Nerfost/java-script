@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>Zadanie 32 - Pustovoit</title>
+<script type="text/javascript">
+function Komputer(marka_k, model_k, karta_graficzna_k, ram_k) {
+  this.marka = marka_k;
+  this.model = model_k;
+  this.karta_graficzna = karta_graficzna_k;
+  this.ram = ram_k;
+}
+Komputer.prototype.pokaz = function() {
+  document.write('Obiekt: Komputer<br>');
+  document.write('marka: ' + this.marka + '<br>');
+  document.write('model: ' + this.model + '<br>');
+  document.write('karta_graficzna: ' + this.karta_graficzna + '<br>');
+  document.write('ram: ' + this.ram + '<br>');
+  document.write('Metody:<br>pokaz, komputer_wyswietl_pustovoit<br><br>');
+}
+var k1 = new Komputer("Dell", "XPS 13", "NVIDIA RTX 3050", "16GB");
+var k2 = new Komputer("HP", "Envy", "AMD Radeon RX 5500", "8GB");
+var k3 = new Komputer("Apple", "MacBook Pro", "Apple M1", "16GB");
+k1.system_operacyjny = "Windows 11";
+k2.system_operacyjny = "Windows 10";
+k3.system_operacyjny = "macOS Big Sur";
+k1.komputer_wyswietl_pustovoit = function() {
+  alert("System operacyjny: " + this.system_operacyjny);
+}
+k2.komputer_wyswietl_pustovoit = function() {
+  alert("System operacyjny: " + this.system_operacyjny);
+}
+k3.komputer_wyswietl_pustovoit = function() {
+  alert("System operacyjny: " + this.system_operacyjny);
+}
+k1.pokaz();
+k1.komputer_wyswietl_pustovoit();
+k2.pokaz();
+k2.komputer_wyswietl_pustovoit();
+k3.pokaz();
+k3.komputer_wyswietl_pustovoit();
+document.write("Komputery i ich pola:<br>");
+document.write("Komputer 1: " + k1.marka + ", " + k1.model + ", " + k1.karta_graficzna + ", " + k1.ram + ", OS: " + k1.system_operacyjny + "<br>");
+document.write("Komputer 2: " + k2.marka + ", " + k2.model + ", " + k2.karta_graficzna + ", " + k2.ram + ", OS: " + k2.system_operacyjny + "<br>");
+document.write("Komputer 3: " + k3.marka + ", " + k3.model + ", " + k3.karta_graficzna + ", " + k3.ram + ", OS: " + k3.system_operacyjny + "<br>");
+</script>
+</head>
+<body>
+<br>
+Programowanie obiektowe.<br>
+</body>
+</html>

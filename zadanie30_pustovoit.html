@@ -1,26 +1,32 @@
-<html> 
-     <head> 
-           <script type="text/javascript"> 
-                 var komputer_pustovoit = { 
-   marka: 'DELL', 
-   kolor: 'czarny', 
-   rozmiar: 'zwykły', 
-   pokaz_pustovoit: function () 
-     { 
-        document.write(this.marka + ' ' + this.kolor + ' ' + this.rozmiar) 
-     } 
-  } 
-  komputer_pustovoit.pokaz_pustovoit(); 
-            </script> 
-     </head> 
-<body> 
- <br> 
-   Programowanie obiektowe. <br> 
-     Obiekt  to  komputer<br> 
-     Pola:<br> 
-     Marka<br> 
-     Kolor<br> 
-     Rozmiar<br> 
-     metoda:  pokaz<br> 
-</body> 
+<html>
+<head>
+  <script type="text/javascript">
+    var Komputer_Pustovoit = {
+      marka: 'Dell',
+      model: 'XPS 13',
+      karta_graficzna: 'NVIDIA GeForce RTX 3050',
+      ram: '16GB',
+      Komputer_wyswietl_pustovoit: function () {
+        document.write(
+          'Marka: ' + this.marka + ', ' +
+          'Model: ' + this.model + ', ' +
+          'Karta graficzna: ' + this.karta_graficzna + ', ' +
+          'RAM: ' + this.ram
+        );
+      }
+    }
+    Komputer_Pustovoit.Komputer_wyswietl_pustovoit();
+  </script>
+</head>
+<body>
+  <br>
+  Programowanie obiektowe. <br>
+  Obiekt to komputer<br>
+  Pola:<br>
+  marka<br>
+  model<br>
+  karta_graficzna<br>
+  ram<br>
+  metoda: Komputer_wyswietl_pustovoit<br>
+</body>
 </html>
