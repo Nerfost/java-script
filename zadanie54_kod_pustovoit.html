@@ -1,0 +1,44 @@
+<html>
+ <body>
+ <textarea cols="90" rows="24">
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+<meta charset="utf-8">
+<TITLE>Zadanie 54 - Pustovoit</TITLE>
+</head>
+<body>
+<script language="JavaScript">
+var imie_pus = prompt("Podaj imię:", "");
+var nazwisko_pus = prompt("Podaj nazwisko:", "");
+
+var a_pus = (nazwisko_pus.length % 4) + 6;
+var b_pus = (imie_pus.length % 6) + 23;
+
+for(var i_pus = 1; i_pus <= b_pus; i_pus++)
+{
+    document.write("*");
+}
+document.write("<br>");
+
+for(var j_pus = 1; j_pus <= (a_pus - 2); j_pus++)
+{
+    document.write("*");
+    for(var k_pus = 1; k_pus <= (b_pus - 2); k_pus++)
+    {
+        document.write("&nbsp;");
+    }
+    document.write("*<br>");
+}
+
+for(var i_pus = 1; i_pus <= b_pus; i_pus++)
+{
+    document.write("*");
+}
+</script>
+</body>
+</html>
+
+ </textarea>
+ </body>
+</html>

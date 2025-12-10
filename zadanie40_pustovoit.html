@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<title>Zadanie 40 Pustovoit</title>
+<meta charset="utf-8">
+<style>
+
+</style>
+</head>
+<body>
+<h1>Proste działania</h1>
+<label for="a">Podaj pierwszą liczbę:</label> <input type="number" id="a">
+<br><br>
+<label for="b">Podaj drugą liczbę:</label> <input type="number" id="b">
+<br><br>
+<input type="button" value="DODAWANIE" onclick="suma_pus()">
+<input type="button" value="ODEJMOWANIE" onclick="roznica_pus()">
+<input type="button" value="MNOŻENIE" onclick="iloczyn_pus()">
+<input type="button" value="DZIELENIE" onclick="iloraz_pus()">
+<div id="wynik" style="margin-top:20px;"></div>
+
+<script>
+function suma_pus()
+{
+    var a_pus = document.getElementById("a").value;
+    var b_pus = document.getElementById("b").value;
+    var wynik_pus = document.getElementById("wynik");
+
+    if (a_pus == "" || b_pus == "")
+    {
+        wynik_pus.innerHTML = "Proszę uzupełnić obie liczby.";
+    } 
+    else
+    {
+        a_pus = parseFloat(a_pus);
+        b_pus = parseFloat(b_pus);
+        var suma_pus = a_pus + b_pus;
+        wynik_pus.innerHTML = "Wynik działania wynosi: " + suma_pus;
+    }
+}
+
+function roznica_pus()
+{
+    var a_pus = document.getElementById("a").value;
+    var b_pus = document.getElementById("b").value;
+    var wynik_pus = document.getElementById("wynik");
+
+    if (a_pus == "" || b_pus == "")
+    {
+        wynik_pus.innerHTML = "Proszę uzupełnić obie liczby.";
+    } 
+    else
+    {
+        a_pus = parseFloat(a_pus);
+        b_pus = parseFloat(b_pus);
+        var roznica_pus = a_pus - b_pus;
+        wynik_pus.innerHTML = "Wynik działania wynosi: " + roznica_pus;
+    }
+}
+
+function iloczyn_pus()
+{
+    var a_pus = document.getElementById("a").value;
+    var b_pus = document.getElementById("b").value;
+    var wynik_pus = document.getElementById("wynik");
+
+    if (a_pus == "" || b_pus == "")
+    {
+        wynik_pus.innerHTML = "Proszę uzupełnić obie liczby.";
+    } 
+    else
+    {
+        a_pus = parseFloat(a_pus);
+        b_pus = parseFloat(b_pus);
+        var iloczyn_pus = a_pus * b_pus;
+        wynik_pus.innerHTML = "Wynik działania wynosi: " + iloczynyn_pus;
+    }
+}
+
+function iloraz_pus()
+{
+    var a_pus = document.getElementById("a").value;
+    var b_pus = document.getElementById("b").value;
+    var wynik_pus = document.getElementById("wynik");
+
+    if (a_pus == "" || b_pus == "")
+    {
+        wynik_pus.innerHTML = "Proszę uzupełnić obie liczby.";
+    } 
+    else
+    {
+        a_pus = parseFloat(a_pus);
+        b_pus = parseFloat(b_pus);
+
+        if (b_pus == 0)
+        {
+            wynik_pus.innerHTML = "Nie wolno dzielić przez zero.";
+        }
+        else
+        {
+            var iloraz_pus = a_pus / b_pus;
+            wynik_pus.innerHTML = "Wynik działania wynosi: " + iloraz_pus;
+        }
+    }
+}
+</script>
+</body>
+</html>

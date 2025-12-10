@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+<meta charset="utf-8">
+<TITLE>Zadanie 47 - Pustovoit</TITLE>
+</head>
+<body>
+<script language="JavaScript">
+var a_pus, b_pus, c_pus;
+
+do {
+    a_pus = parseFloat(prompt("Podaj bok a:", ""));
+    b_pus = parseFloat(prompt("Podaj bok b:", ""));
+    c_pus = parseFloat(prompt("Podaj bok c:", ""));
+
+    if(!((a_pus > 0) && (b_pus > 0) && (c_pus > 0) && (a_pus + b_pus > c_pus) && (a_pus + c_pus > b_pus) && (c_pus + b_pus > a_pus))) {
+        alert("Boki nie tworzą trójkąta. Podaj ponownie.");
+    }
+}
+while(!((a_pus > 0) && (b_pus > 0) && (c_pus > 0) && (a_pus + b_pus > c_pus) && (a_pus + c_pus > b_pus) && (c_pus + b_pus > a_pus)));
+
+document.write("Trójkąt o bokach: a=" + a_pus + ", b=" + b_pus + ", c=" + c_pus + "<br>");
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+<meta charset="utf-8">
+<TITLE>Zadanie 53 - Pustovoit</TITLE>
+</head>
+<body>
+<script language="JavaScript">
+var a_pus = parseFloat(prompt("Podaj a:", ""));
+var b_pus = parseFloat(prompt("Podaj b:", ""));
+
+for(var i_pus = 1; i_pus <= b_pus; i_pus++)
+{
+    document.write("*");
+}
+document.write("<br>");
+
+var wiersz_pus = "*";
+for(var i_pus = 1; i_pus <= (b_pus - 2); i_pus++)
+{
+    wiersz_pus = wiersz_pus + "&nbsp;&nbsp;";
+}
+wiersz_pus = wiersz_pus + "*";
+
+for(var j_pus = 1; j_pus <= (a_pus - 2); j_pus++)
+{
+    document.write(wiersz_pus + "<br>");
+}
+
+for(var i_pus = 1; i_pus <= b_pus; i_pus++)
+{
+    document.write("*");
+}
+</script>
+</body>
+</html>

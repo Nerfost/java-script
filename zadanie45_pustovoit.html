@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+<meta charset="utf-8">
+<TITLE>Zadanie 45 - Pustovoit</TITLE>
+</head>
+<body>
+<script language="JavaScript">
+var liczba_pus = parseFloat(prompt("Podaj liczbę:", ""));
+var ile_razy_pus = (9 % 4) + 10;
+var wielkosc_pus = (9 % 3) + 40;
+
+document.write("ilość wykonania pętli = " + ile_razy_pus + "<br>");
+document.write("wielkość liter = " + wielkosc_pus + "px<br>");
+
+if(liczba_pus % 2 == 0)
+{
+    for(i_pus = 1; i_pus <= liczba_pus; i_pus++)
+    {
+        document.write("<p style=\"font-size:" + wielkosc_pus + "px; color:blue;\">Pustovoit</p>");
+    }
+}
+else
+{
+    for(i_pus = 1; i_pus <= liczba_pus; i_pus++)
+    {
+        document.write("<p style=\"font-size:" + wielkosc_pus + "px; color:green;\">Yevhenii</p>");
+    }
+}
+</script>
+</body>
+</html>

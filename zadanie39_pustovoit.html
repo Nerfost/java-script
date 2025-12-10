@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+<meta charset="utf-8">
+<TITLE>Zadanie 39 - Pustovoit</TITLE>
+</head>
+<body>
+<script language="JavaScript">
+function kolor_pus() {
+var x_pus = prompt("Podaj kolor", "");
+if(x_pus == 1 || x_pus.toLowerCase() == "czerwony") {
+document.write('<h1 style="color:red;font-size:7;">wczytałeś kolor czerwony</h1><br />');
+}
+else if(x_pus == 2 || x_pus.toLowerCase() == "niebieski") {
+document.write('<h6 style="color:blue;font-size:1;">wczytałeś kolor niebieski</h6><br />');
+}
+}
+</script>
+<font color=green>MENU:</font><br>
+<font color=red>1-CZERWONY</font><br>
+<font color=blue>2-NIEBIESKI</font><br>
+<input type="button" name="pustovoit" value="Oblicz" onclick="kolor_pus()" />
+</body>
+</html>

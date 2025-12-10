@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>    
+    <script>
+         do{
+                var liczba = prompt("Podaj liczbę n:");  
+                var n_pus = parseFloat(liczba);  
+            }while(n_pus<=0)
+            
+            if(n_pus>0){silnia_pus = 1;
+                for(i_pus=1;i_pus<=n_pus;i_pus++){
+                    silnia_pus*=i_pus;
+                }
+                document.write("n="+n_pus+"<br>"+n_pus+"!="+silnia_pus);
+            }
+
+    </script>
+</body>
+</html>

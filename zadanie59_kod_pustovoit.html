@@ -1,0 +1,35 @@
+<html>
+ <body>
+ <textarea cols="90" rows="24">
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+<meta charset="utf-8">
+<TITLE>Zadanie 59 - Pustovoit</TITLE>
+</head>
+<body>
+<script language="JavaScript">
+var R_pus = parseFloat(prompt("Podaj promień koła R:", ""));
+var N_pus = 0;
+var R_int_pus = Math.floor(R_pus);
+
+for(i_pus = Math.floor(-R_pus - 1); i_pus <= Math.floor(R_pus + 1); i_pus++)
+{
+    for(j_pus = Math.floor(-R_pus - 1); j_pus <= Math.floor(R_pus + 1); j_pus++)
+    {
+        if(i_pus * i_pus + j_pus * j_pus <= R_pus * R_pus)
+        {
+            N_pus++;
+        }
+    }
+}
+
+document.write("Promień koła R = " + R_pus + "<br>");
+document.write("Liczba punktów kratowych N(R) = " + N_pus + "<br>");
+</script>
+</body>
+</html>
+
+ </textarea>
+ </body>
+</html>
