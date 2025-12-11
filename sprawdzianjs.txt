@@ -100,3 +100,121 @@ function oblicz() {
 
 </body>
 </html>
+
+
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Trójmian kwadratowy</title>
+<style>
+  input { width: 50px; margin-right: 10px; }
+  button { margin: 5px 0; display: block; }
+  #wynik { margin-top: 20px; border: 1px solid #ccc; padding: 10px; width: 400px; }
+</style>
+</head>
+<body>
+<h2>Trójmian kwadratowy</h2>
+
+a: <input type="number" id="a" value="1">
+b: <input type="number" id="b" value="0">
+c: <input type="number" id="c" value="0">
+
+<button onclick="pokazDelta()">Pokaż deltę i pierwiastki</button>
+<button onclick="pokazWierzch()">Pokaż wierzchołek</button>
+<button onclick="pokazKanoniczna()">Pokaż postać kanoniczną</button>
+<button onclick="pokazIloczynowa()">Pokaż postać iloczynową</button>
+<button onclick="pokazZbior()">Pokaż zbiór wartości</button>
+
+<div id="wynik"></div>
+
+<script>
+function pobierzWartosci() {
+    var a = parseFloat(document.getElementById("a").value);
+    var b = parseFloat(document.getElementById("b").value);
+    var c = parseFloat(document.getElementById("c").value);
+    return {a: a, b: b, c: c};
+}
+
+function pokazDelta() {
+    var wartosci = pobierzWartosci();
+    var a = wartosci.a, b = wartosci.b, c = wartosci.c;
+    var wynikDiv = document.getElementById("wynik");
+
+    if (a === 0) { wynikDiv.innerHTML = "a nie może być 0!"; return; }
+
+    var delta = b*b - 4*a*c;
+    var x1, x2;
+    if (delta > 0) {
+        x1 = (-b - Math.sqrt(delta)) / (2*a);
+        x2 = (-b + Math.sqrt(delta)) / (2*a);
+    } else if (delta === 0) {
+        x1 = x2 = -b / (2*a);
+    } else {
+        x1 = x2 = "brak";
+    }
+
+    wynikDiv.innerHTML = "<b>Delta:</b> " + delta + "<br>" +
+                         "<b>Pierwiastek 1:</b> " + x1 + "<br>" +
+                         "<b>Pierwiastek 2:</b> " + x2;
+}
+
+function pokazWierzch() {
+    var wartosci = pobierzWartosci();
+    var a = wartosci.a, b = wartosci.b, c = wartosci.c;
+    var wynikDiv = document.getElementById("wynik");
+
+    var wX = -b / (2*a);
+    var wY = a*wX*wX + b*wX + c;
+
+    wynikDiv.innerHTML = "<b>Wierzchołek:</b> (" + wX + ", " + wY + ")";
+}
+
+function pokazKanoniczna() {
+    var wartosci = pobierzWartosci();
+    var a = wartosci.a, b = wartosci.b, c = wartosci.c;
+    var wynikDiv = document.getElementById("wynik");
+
+    var wX = -b / (2*a);
+    var wY = a*wX*wX + b*wX + c;
+
+    wynikDiv.innerHTML = "<b>Postać kanoniczna:</b> " + a + "(x - " + wX + ")² + " + wY;
+}
+
+function pokazIloczynowa() {
+    var wartosci = pobierzWartosci();
+    var a = wartosci.a, b = wartosci.b, c = wartosci.c;
+    var wynikDiv = document.getElementById("wynik");
+
+    var delta = b*b - 4*a*c;
+    var iloczynowa;
+    if (delta > 0) {
+        var x1 = (-b - Math.sqrt(delta)) / (2*a);
+        var x2 = (-b + Math.sqrt(delta)) / (2*a);
+        iloczynowa = a + "(x - " + x1 + ")(x - " + x2 + ")";
+    } else if (delta === 0) {
+        var x = -b / (2*a);
+        iloczynowa = a + "(x - " + x + ")²";
+    } else {
+        iloczynowa = "brak miejsc zerowych";
+    }
+
+    wynikDiv.innerHTML = "<b>Postać iloczynowa:</b> " + iloczynowa;
+}
+
+function pokazZbior() {
+    var wartosci = pobierzWartosci();
+    var a = wartosci.a, b = wartosci.b, c = wartosci.c;
+    var wynikDiv = document.getElementById("wynik");
+
+    var wX = -b / (2*a);
+    var wY = a*wX*wX + b*wX + c;
+    var zbior = a > 0 ? "f(x) ≥ " + wY : "f(x) ≤ " + wY;
+
+    wynikDiv.innerHTML = "<b>Zbiór wartości:</b> " + zbior;
+}
+</script>
+
+</body>
+</html>
