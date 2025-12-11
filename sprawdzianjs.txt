@@ -22,3 +22,81 @@ Gdy a<>0
 Na ocena 6: narysuj układ współrzędnych i wykres funkcji, zaznacz na osiach 
 jednostki.(wskazówka do oceny cel --> użyj  element canvans, instrukcja JS strona 132 
 )
+
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Trójmian kwadratowy</title>
+<style>
+  input { width: 50px; }
+  #wynik { margin-top: 20px; }
+</style>
+</head>
+<body>
+<h2>Trójmian kwadratowy</h2>
+
+a: <input type="number" id="a" value="1">
+b: <input type="number" id="b" value="0">
+c: <input type="number" id="c" value="0">
+<button onclick="oblicz()">Oblicz</button>
+
+<div id="wynik"></div>
+
+<script>
+function oblicz() {
+    const a = parseFloat(document.getElementById("a").value);
+    const b = parseFloat(document.getElementById("b").value);
+    const c = parseFloat(document.getElementById("c").value);
+    const wynikDiv = document.getElementById("wynik");
+
+    if (a === 0) {
+        wynikDiv.innerHTML = "a nie może być 0!";
+        return;
+    }
+
+    const delta = b*b - 4*a*c;
+    let x1, x2;
+    if (delta > 0) {
+        x1 = (-b - Math.sqrt(delta)) / (2*a);
+        x2 = (-b + Math.sqrt(delta)) / (2*a);
+    } else if (delta === 0) {
+        x1 = x2 = -b / (2*a);
+    } else {
+        x1 = x2 = "brak";
+    }
+
+    const wierzchX = -b / (2*a);
+    const wierzchY = a*wierzchX*wierzchX + b*wierzchX + c;
+
+    // Postać kanoniczna
+    const kanoniczna = `${a}(x - ${wierzchX})² + ${wierzchY}`;
+
+    // Postać iloczynowa
+    let iloczynowa;
+    if (delta > 0) {
+        iloczynowa = `${a}(x - ${x1})(x - ${x2})`;
+    } else if (delta === 0) {
+        iloczynowa = `${a}(x - ${x1})²`;
+    } else {
+        iloczynowa = "brak miejsc zerowych";
+    }
+
+    // Zbiór wartości
+    const zbior = a > 0 ? `f(x) ≥ ${wierzchY}` : `f(x) ≤ ${wierzchY}`;
+
+    wynikDiv.innerHTML = `
+        <b>Delta:</b> ${delta}<br>
+        <b>Pierwiastek 1:</b> ${x1}<br>
+        <b>Pierwiastek 2:</b> ${x2}<br>
+        <b>Wierzchołek:</b> (${wierzchX}, ${wierzchY})<br>
+        <b>Postać kanoniczna:</b> ${kanoniczna}<br>
+        <b>Postać iloczynowa:</b> ${iloczynowa}<br>
+        <b>Zbiór wartości:</b> ${zbior}
+    `;
+}
+</script>
+
+</body>
+</html>
